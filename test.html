@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue"></script>
+    <title>Loops </title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="course in courses">{{course.title}} || by {{course.instructor}}</li>
+        </ul>
+    </div>
+    
+    <script>
+        vm = new Vue({
+            el: '#app',
+            data:{
+                courses: [
+                {title: 'VueJS', instructor: 'Mohamed Shawky'},
+                {title: 'Laravel', instructor: 'Moamen Abdelwahed'},
+                {title: 'Angular', instructor: 'Amr Abdelrahman'},
+                {title: 'IONIC', instructor: 'Mohamed Shawky'}
+            ]
+            }
+        })
+        
+    </script>
+</body>
+</html>
